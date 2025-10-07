@@ -4,21 +4,28 @@
 
 Este guia mostra exatamente quais funções do LB Phone foram adaptadas para funcionar com o framework vRP, onde cada função está localizada e como foi implementada.
 
+> **📌 IMPORTANTE:** O framework **Creative Summzerz** é baseado no **vRP**, por isso as adaptações mostradas aqui funcionam para ambos os frameworks. O Creative Summzerz mantém a mesma estrutura e funções do vRP, apenas com melhorias e otimizações.
+
 ---
 
 ## ⚡ **Configuração Inicial**
+
+### **🔗 Compatibilidade de Frameworks**
+
+| **Framework** | **Config** | **Compatibilidade** |
+|---------------|------------|-------------------|
+| **Creative Summzerz** | `"vrp"` | ✅ Total (baseado no vRP) |
+| **Standalone** | `"standalone"` | ❌ Sem framework ( São todos) |
 
 ### **1. Alterar Framework**
 ```lua
 -- Arquivo: config/config.lua
 Config.Framework = "standalone"  
--- ou
-Config.Framework = "vrp"   -- Para vRP 1.0
-```
+
 
 ### **2. Reiniciar Recurso**
 ```lua
-restart corephone
+restart lbphone
 ```
 
 ---
@@ -750,7 +757,7 @@ end)
 
 ### **Passos de instalação:**
 1. [ ] Alterar `Config.Framework = "standalone"` em `config/config.lua`
-2. [ ] Reiniciar o recurso: `restart corephone`
+2. [ ] Reiniciar o recurso: `restart lbphone`
 3. [ ] Testar se o telefone abre
 4. [ ] Verificar se as funções básicas funcionam
 
